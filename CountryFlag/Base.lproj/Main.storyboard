@@ -46,6 +46,13 @@
                                     <action selector="selectAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HXI-6W-LoB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-JU-9g5">
+                                <rect key="frame" x="110" y="610" width="186" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -67,6 +74,7 @@
                         <outlet property="button1" destination="4IP-Kt-ODX" id="Wqc-jX-jGq"/>
                         <outlet property="button2" destination="QX2-Gz-pAN" id="C3S-Lr-tz5"/>
                         <outlet property="button3" destination="NJH-es-fdU" id="57l-ga-Umv"/>
+                        <outlet property="scoreLabel" destination="XNI-JU-9g5" id="X39-a6-txn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

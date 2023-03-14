@@ -12,7 +12,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
     
+    @IBOutlet weak var scoreButton: UIButton!
+    
+    private var questionCount = 0
     private var countriesArray = [String]()
     private var score = 0
     private var correctAnswer = 0
@@ -28,7 +32,6 @@ class ViewController: UIViewController {
         
         
         buttonLayer()
-  
         askQuestion()
     
     }
@@ -46,10 +49,23 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countriesArray[2]), for: UIControl.State.normal)
         
         title = countriesArray[correctAnswer].uppercased()
-
-      
         
+        
+        questionCount += 1
+        
+        if questionCount == 10{
+            let endAlert = UIAlertController(title: "Game Over", message: "Your score: \(score)", preferredStyle: .alert)
+            endAlert.addAction(UIAlertAction(title: "Okey", style: .default, handler: nil))
+            
+            present(endAlert, animated: true)
+        }
+        
+        
+       
+    
     }
+    
+
     
     
 
@@ -73,14 +89,13 @@ class ViewController: UIViewController {
         
         present(alert, animated: true)
       
+        scoreLabel.text = "\(score)"
+        
+    
        
-        
-        
-        
-        
+    
     }
-    
-    
+  
     
     func buttonLayer(){
         button1.layer.borderWidth = 1
